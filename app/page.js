@@ -145,12 +145,12 @@ const PUBLICATIONS = [
     color: '#7C3AED',
   },
   {
-    title: 'Scalable Healthcare AI Diagnostic Systems',
+    title: 'Prediction of Liver Stiffness Using Elastographic Images Fibroscan',
     journal: 'Springer Nature',
     year: '2024',
     accuracy: '—',
     badge: 'Springer',
-    description: 'Research on building scalable AI infrastructure for medical diagnostics and triage',
+    description: 'Predicting liver stiffness using FibroScan elastographic data combined with machine learning techniques',
     color: '#EC4899',
   },
 ]
