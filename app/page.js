@@ -576,7 +576,7 @@ function HeroSection() {
               {/* ✅ PROFILE PHOTO — place your image as /public/profile.jpg */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/profile.jpg"
+                src="/profile.jpeg"
                 alt="K S Sivaneshakumar"
                 className="w-full h-full object-cover object-top"
                 onError={(e) => {
