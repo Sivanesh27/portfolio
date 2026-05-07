@@ -1547,7 +1547,7 @@ function ContactSection() {
           style={{ borderColor: 'rgba(255,255,255,0.05)' }}
         >
           <p className="text-white/18 text-xs tracking-wide">
-            © 2025 K S Sivaneshakumar · Built with Next.js + Framer Motion · Coimbatore, India
+            © 2026 K S Sivaneshakumar · Built with Next.js + Framer Motion · Coimbatore, India
           </p>
         </motion.div>
       </div>
