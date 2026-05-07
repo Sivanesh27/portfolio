@@ -549,35 +549,68 @@ function HeroSection() {
 
         {/* RIGHT — floating cards */}
         <div className="relative hidden lg:flex items-center justify-center">
-          {/* Central orb */}
+          {/* Profile Photo / Central orb */}
           <motion.div
             initial={{ opacity: 0, scale: 0.6 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-64 h-64 rounded-full flex items-center justify-center"
-            style={{
-              background: 'radial-gradient(circle at 40% 35%, rgba(0,212,255,0.15), rgba(124,58,237,0.1), transparent)',
-              border: '1px solid rgba(0,212,255,0.12)',
-              boxShadow: '0 0 80px rgba(0,212,255,0.08), inset 0 0 40px rgba(124,58,237,0.05)',
-            }}
+            className="relative flex items-center justify-center"
           >
-            <div className="text-center">
+            {/* Glow backdrop */}
+            <div
+              className="absolute w-72 h-72 rounded-full pointer-events-none"
+              style={{
+                background: 'radial-gradient(circle, rgba(0,212,255,0.14), rgba(124,58,237,0.09), transparent)',
+                filter: 'blur(22px)',
+              }}
+            />
+
+            {/* Photo frame */}
+            <div
+              className="relative w-60 h-60 rounded-full overflow-hidden"
+              style={{
+                border: '2px solid rgba(0,212,255,0.28)',
+                boxShadow: '0 0 50px rgba(0,212,255,0.18), 0 0 100px rgba(124,58,237,0.1)',
+              }}
+            >
+              {/* ✅ PROFILE PHOTO — place your image as /public/profile.jpg */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/profile.jpg"
+                alt="K S Sivaneshakumar"
+                className="w-full h-full object-cover object-top"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                  const fb = e.currentTarget.nextElementSibling
+                  if (fb) fb.style.display = 'flex'
+                }}
+              />
+              {/* Fallback when no photo uploaded yet */}
               <div
-                className="font-black text-5xl mb-1"
+                className="absolute inset-0 flex-col items-center justify-center"
                 style={{
-                  background: 'linear-gradient(135deg, #00D4FF, #7C3AED)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
+                  display: 'flex',
+                  background: 'radial-gradient(circle at 40% 35%, rgba(0,212,255,0.16), rgba(124,58,237,0.1))',
                 }}
               >
-                KSS
+                <div
+                  className="font-black text-5xl mb-1"
+                  style={{
+                    background: 'linear-gradient(135deg, #00D4FF, #7C3AED)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                >
+                  KSS
+                </div>
+                <div className="text-xs text-white/25 tracking-[0.3em]">PORTFOLIO</div>
               </div>
-              <div className="text-xs text-white/25 tracking-[0.3em]">PORTFOLIO</div>
             </div>
-            {/* Orbit ring */}
+
+            {/* Outer orbit ring */}
             <div
-              className="absolute w-80 h-80 rounded-full"
-              style={{ border: '1px solid rgba(255,255,255,0.04)' }}
+              className="absolute w-80 h-80 rounded-full pointer-events-none"
+              style={{ border: '1px solid rgba(255,255,255,0.05)' }}
             />
           </motion.div>
 
@@ -1247,37 +1280,7 @@ function ExperienceSection() {
             </motion.div>
           ))}
 
-          {/* Education node */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="relative pl-14"
-          >
-            <div
-              className="absolute left-[14px] top-5 w-[18px] h-[18px] rounded-full border-2"
-              style={{
-                background: '#0B0F19',
-                borderColor: '#10B981',
-                boxShadow: '0 0 18px rgba(16,185,129,0.65)',
-              }}
-            />
-            <div
-              className="p-5 rounded-2xl"
-              style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)' }}
-            >
-              <div className="text-xs text-white/30 mb-1">Aug 2023 – May 2027</div>
-              <h3 className="font-bold text-white text-lg">B.E. Biomedical Engineering</h3>
-              <p className="text-sm font-medium mt-0.5 text-emerald-400">Sri Ramakrishna Engineering College</p>
-              <div className="flex flex-wrap items-center gap-4 mt-3">
-                <span className="text-xs text-white/35">Minor: AI/ML (10/10 CGPA)</span>
-                <span className="text-white/15 text-xs">·</span>
-                <span className="text-xs text-white/35">CGPA: 8.83</span>
-                <span className="text-white/15 text-xs">·</span>
-                <span className="text-xs text-white/35">GATE AIR 372</span>
-              </div>
-            </div>
-          </motion.div>
+          {/* Education removed from experience — lives in Stats section */}
         </div>
       </div>
     </section>
