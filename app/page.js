@@ -18,7 +18,7 @@ const OWNER = {
   title: 'Biomedical AI Engineer',
   location: 'Coimbatore, India',
   email: 'ks.sivaneshakumar@gmail.com',
-  phone: '+91 9965330065',
+  phone: '+91',
   linkedin: 'https://linkedin.com/in/sivaneshakumar',
 }
 
@@ -150,7 +150,7 @@ const PUBLICATIONS = [
     year: '2024',
     accuracy: '—',
     badge: 'Springer',
-    description: 'Predicting liver stiffness using FibroScan elastographic data combined with machine learning techniques',
+    description: 'Predicting liver stiffness using FibroScan elastographic data combined with machine learning techniques, aiming to support non-invasive, accurate, and early diagnosis of liver fibrosis.',
     color: '#EC4899',
   },
 ]
@@ -576,7 +576,7 @@ function HeroSection() {
               {/* ✅ PROFILE PHOTO — place your image as /public/profile.jpg */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/profile.jpeg"
+                src="/profile.jpg"
                 alt="K S Sivaneshakumar"
                 className="w-full h-full object-cover object-top"
                 onError={(e) => {
@@ -585,26 +585,13 @@ function HeroSection() {
                   if (fb) fb.style.display = 'flex'
                 }}
               />
-              {/* Fallback when no photo uploaded yet */}
+              {/* Subtle gradient overlay on photo edges for blending */}
               <div
-                className="absolute inset-0 flex-col items-center justify-center"
+                className="absolute inset-0 pointer-events-none"
                 style={{
-                  display: 'flex',
-                  background: 'radial-gradient(circle at 40% 35%, rgba(0,212,255,0.16), rgba(124,58,237,0.1))',
+                  background: 'radial-gradient(circle at 50% 50%, transparent 55%, rgba(11,15,25,0.35) 100%)',
                 }}
-              >
-                <div
-                  className="font-black text-5xl mb-1"
-                  style={{
-                    background: 'linear-gradient(135deg, #00D4FF, #7C3AED)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}
-                >
-                  KSS
-                </div>
-                <div className="text-xs text-white/25 tracking-[0.3em]">PORTFOLIO</div>
-              </div>
+              />
             </div>
 
             {/* Outer orbit ring */}
