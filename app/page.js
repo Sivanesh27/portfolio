@@ -25,7 +25,7 @@ const OWNER = {
 const STATS = [
   { value: '3', suffix: '+', label: 'Research Papers', sublabel: 'IEEE & Springer', icon: FileText, color: '#00D4FF' },
   { value: '94', suffix: '%', label: 'Diagnostic Accuracy', sublabel: 'Skin Cancer CNN', icon: Activity, color: '#7C3AED' },
-  { value: '372', suffix: '', label: 'GATE Rank (AIR)', sublabel: 'Top 0.5% Nationwide', icon: Trophy, color: '#F59E0B' },
+  { value: '372', suffix: '', label: 'GATE Rank (AIR)', sublabel: 'Top 10% Nationwide', icon: Trophy, color: '#F59E0B' },
   { value: '10', suffix: '/10', label: 'Minor CGPA', sublabel: 'AI & Machine Learning', icon: GraduationCap, color: '#EC4899' },
   { value: '15', suffix: '+', label: 'Certifications', sublabel: 'MongoDB Certified', icon: Database, color: '#10B981' },
   { value: '8.83', suffix: '', label: 'Main CGPA', sublabel: 'Biomedical Engineering', icon: Star, color: '#00D4FF' },
@@ -156,12 +156,12 @@ const PUBLICATIONS = [
 ]
 
 const ACHIEVEMENTS = [
-  { title: 'GATE AIR 372', detail: 'All India Rank — Top 0.5% of all candidates nationwide', icon: Trophy, color: '#F59E0B', year: '2024' },
+  { title: 'GATE AIR 372', detail: 'All India Rank — Top 10% of all candidates nationwide', icon: Trophy, color: '#F59E0B', year: '2024' },
   { title: 'NPTEL Gold Medal', detail: 'Scored 97% in Incubation & Entrepreneurship at IIT Bombay', icon: Star, color: '#10B981', year: '2024' },
   { title: 'SREC Innovate Winner', detail: '1st Place — Medi-Vault Unified Healthcare Ecosystem', icon: Award, color: '#7C3AED', year: '2026' },
   { title: 'Design Spark Top 5', detail: 'MetricX AI Agent System — School of Design Thinking', icon: Zap, color: '#00D4FF', year: '2024' },
   { title: 'MongoDB Certified', detail: '15+ certifications in NoSQL Optimization, RAG & Vector Search', icon: Database, color: '#EC4899', year: '2024' },
-  { title: 'AI Ambassador SREC', detail: 'Leading campus AI initiatives, workshops, and research seminars', icon: Brain, color: '#F59E0B', year: '2024' },
+  { title: 'AI Ambassador SREC', detail: 'Leading campus AI initiatives.', icon: Brain, color: '#F59E0B', year: '2024' },
 ]
 
 // ================================================================
